@@ -1,0 +1,20 @@
+package array;
+
+import java.util.Arrays;
+import java.util.OptionalInt;
+
+public class MinAndMaxI {
+    public static void main(String[] args) {
+        int[] arr = {10, 20, 4, 45, 85, 99};
+        
+        OptionalInt min = Arrays.stream(arr).min();
+        OptionalInt max = Arrays.stream(arr).max();
+        
+        if (min.isPresent() && max.isPresent()) {
+            System.out.println("Minimum element in the array is: " + min.getAsInt());
+            System.out.println("Maximum element in the array is: " + max.getAsInt());
+        } else {
+            System.out.println("The array is empty.");
+        }
+    }
+}
