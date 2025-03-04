@@ -1,0 +1,18 @@
+package array_problems;
+
+import java.util.Arrays;
+
+public class RemoveAllOccurance {
+	public static void main(String[] args) {
+		int[] input = { 1, 2, 2, 3, 3, 3, 4, 5, 1 };
+		int target = 2;
+
+		int[] result = Arrays.stream(input).filter(num -> num != target).toArray();
+
+		System.out.println(Arrays.toString(result));
+	}
+
+}
+
+
+output : [1, 3, 3, 3, 4, 5, 1]
